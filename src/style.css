@@ -1,0 +1,98 @@
+header{
+  border-bottom:dashed 2px ;
+  text-align: center;
+}
+ul {
+  list-style-type: square; 
+  margin:auto 10px;
+ }
+ ol {
+  margin: auto 30px;
+ }
+div {
+  overflow: hidden;
+  text-align: center;
+  line-height: 50px;
+  float: right;
+}
+
+.numer { 
+  counter-reset: schetchik 0;    /* задаётся имя и начальное значение отсчёта, по умолчанию 0 */
+  }
+
+.numer dt {position: relative;}
+
+.numer dt:after {    /* это стиль числа, обязательно с :before или :after */
+  content: " " counter(schetchik, decimal) ". ";    /* вставляется знак " - ", имя счётчика, определяется тип маркера и снова " - " */
+  counter-increment: schetchik 1;    /* задаётся имя и значение, на которое будет увеличиваться счётчик, по умолчанию 1 */
+  position: absolute;
+  left: 0; top: 0;
+  color: #040300;
+  
+  } 
+  .photo .photo:nth-of-type(2) {
+      display: none;
+  }
+  .photo:hover .photo:nth-of-type(1) {
+      display: none;
+    }
+    .photo:hover .photo:nth-of-type(2) {
+      display: block;
+    }
+    .photo:hover {
+      cursor: pointer;
+    }
+    
+
+.container {
+  font-style: italic ;
+  display: flex;
+  justify-content: center;
+  
+}
+.box{
+  padding: 30px;
+  margin-top: 100px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 700px;
+  transition: all 0.7s linear;
+  flex-direction: column;
+  width: 544px;
+  height: 650px;
+  border: solid black 2px;
+  background-color: #00B5B5;
+}
+.photo {
+  overflow: hidden;
+  width: 400px;
+  height: 350px;
+}
+li {
+  font-size: 14;
+}
+.box:hover {
+  background-color: color-mix(in srgb, red 20%, blue 30% ) ;
+  background-size: 1.5rem;
+  
+}
+header:hover {
+  background: linear-gradient(red, green, blue, yellow);
+  transition: all 1.7s linear;    
+}
+
+img:hover {
+  transform: scale(1.25)
+}
+img {
+  transition: transform 0.5s
+
+}
+li,
+p,
+h3,
+h1,
+ul {
+  text-align: center;
+
+}
