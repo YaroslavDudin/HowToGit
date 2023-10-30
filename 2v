@@ -1,0 +1,28 @@
+export const getSquare= (num) => num * num;
+
+export const isEven = (num) => num % 2 === 0;
+
+export const castNumber = (value) => {
+if (value.isNaN(num)) {
+return 'given value is not convertible';
+}
+return num;
+}
+
+export const checkType = (str, num) => {
+  if (num < 0 || num >= str.length) {
+    return str;
+  }
+
+  return str.slice(0, num) + str.charAt(num).toUpperCase() + str.slice(num + 1);
+};
+
+export const countVowels = (text) => {
+  let count = 0;
+  for (let i = 0; i < text.length; i += 1) {
+    if (text[i].match(/[A, E, I, O, U, Y, a , e , i , o , u , y]/)) {
+      count += 1;
+    }
+  }
+  return count;
+};
