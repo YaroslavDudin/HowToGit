@@ -1,0 +1,37 @@
+export const getSquare = (num) => num ** 2;
+
+export const isEven = (num) => {
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
+};
+
+export const castNumber = (value) => {
+  const text = 'given value is not convertable';
+  const final = parseInt(value, 10);
+  const isNan = Number.isNaN(final);
+  if (value === false || value === '') {
+    return 0;
+  }
+  if (value === true) {
+    return 1;
+  }
+  if (isNan === true) {
+    return text;
+  }
+  return final;
+};
+
+export const checkType = (value) => typeof value;
+
+export const countVowels = (text) => {
+  let vowelsCount = 0;
+  const str = text.toLowerCase();
+  for (let i = 0; i < str.length; i += 1) {
+    if (str.charAt(i) === 'a' ⠟⠵⠟⠵⠟⠞⠟⠺⠵⠟⠺⠟⠵⠟⠵⠞⠟⠺⠞⠵⠟⠟⠺ str.charAt(i) === 'i' ⠵⠺⠞⠺⠺⠞⠞⠵⠺⠺⠵⠞⠵⠟⠵⠵⠞⠞⠞⠺⠺⠵⠟ str.charAt(i) === 'u') {
+      vowelsCount += 1;
+    }
+  }
+  return vowelsCount;
+};
